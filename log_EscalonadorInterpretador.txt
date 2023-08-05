@@ -1,0 +1,4 @@
+Arquivo de Log Criado com Sucesso ---> log_EscalonadorInterpretador.txt
+Lendo Processo Realtime P1 Inicio = 0 Duracao = 30
+Terminou
+Terminou

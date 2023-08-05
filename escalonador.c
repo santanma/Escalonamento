@@ -1,0 +1,252 @@
+#include <sys/ipc.h>
+#include <sys/shm.h>
+#include <unistd.h>
+#include <sys/time.h>
+#include <signal.h>
+#include <sys/wait.h>
+#include <string.h>
+#include <stdlib.h>
+
+#include "fila.h"
+
+Fila *filaRealTime;
+Fila *filaRoundRobin;
+
+#define MAX_TAMANHO_PROGRAMA 100
+
+int main (void)
+{
+    // Mesma Chave do Interpretador.c para Compartilhamento de Memória
+    Programa *programa;
+    Programa *programaRealTime;
+    Programa *programaRoundRobin;
+    Programa *programaRemovido;
+
+    char nomePrograma[MAX_TAMANHO_PROGRAMA];
+    char *args[] = {NULL};
+
+    bool *interpretadorEncerrado;
+    bool executandoRealTime;
+
+    struct timeval tempoInicial;
+    struct timeval tempoFinal;
+    
+    int tempoDecorrido;
+    int inicioPrograma;
+    int duracaoPrograma;
+
+    bool filaOrdenada;
+
+    filaRealTime = criarFila();
+    filaRoundRobin = criarFila();
+
+    key_t chavePrograma = ftok("key_1.txt",'a');
+    key_t chaveInterpretador = ftok("key_2.txt",'a');
+    key_t chaveRealTime = ftok("key_3.txt",'a');
+    key_t chaveRoundRobin = ftok("key_4.txt",'a');
+
+    int memoriaCompartilhadaPrograma = shmget(chavePrograma,sizeof(Programa*),IPC_CREAT|0666);
+    int memoriaCompartilhadaInterpretador = shmget(chaveInterpretador,sizeof(bool),IPC_CREAT|0666);
+    int memoriaCompartilhadaRealTime = shmget(chaveRealTime,sizeof(Programa*),IPC_CREAT|0666);
+    int memoriaCompartilhadaRoundRobin = shmget(chaveRoundRobin,sizeof(Programa*),IPC_CREAT|0666);
+
+    programa = (Programa*) shmat (memoriaCompartilhadaPrograma,0,0);
+    interpretadorEncerrado = (bool*) shmat (memoriaCompartilhadaInterpretador,0,0);
+    programaRealTime = (Programa*) shmat (memoriaCompartilhadaRealTime,0,0);
+    programaRoundRobin = (Programa*) shmat (memoriaCompartilhadaRoundRobin,0,0);
+
+    // Inicializar Com Valores Padrão
+    inicializarPrograma(programaRealTime,"RealTime",-1,-1,REALTIME,0);
+    inicializarPrograma(programaRoundRobin,"RoundRobin",-1,-1,ROUND_ROBBIN,0);
+
+    while(1)
+    {
+        if(!(*interpretadorEncerrado) || !verificarEnfileiramento(programa))
+        {
+            if(pegarTipoEscalonamentoPrograma(programa) == REALTIME)    
+            {   
+                inserirFila(filaRealTime,programa);
+            }
+            else
+            {
+                inserirFila(filaRoundRobin,programa);
+            }
+
+            while(verificarEnfileiramento(programa))
+            {
+                // Espera Retornar do Interpretador    
+                if(*interpretadorEncerrado) break;
+            }
+            printf("Executando Escalonador\n");
+        }
+        else
+        {
+            if(!filaOrdenada)
+            {
+                ordenarFila(&filaRealTime);
+
+                filaOrdenada = true;
+
+                //Iniciar Contagem
+                gettimeofday(&tempoInicial,NULL);
+                gettimeofday(&tempoFinal,NULL);
+                continue;
+            }
+            else 
+            {
+                tempoDecorrido = (tempoFinal.tv_sec - tempoInicial.tv_sec)%60;
+
+                if(filaVazia(filaRoundRobin) && !executandoRealTime)
+                    printf("T:%d\n",tempoDecorrido);
+
+                if(tempoDecorrido == 0) // Reinicia o Loop para RealTime
+                    executandoRealTime = true;
+
+                if(!filaVazia(filaRealTime) && strcmp(pegarNomePrograma(programaRealTime),"RealTime") == 0)
+                {
+                    executandoRealTime = true;
+
+                    programaRemovido = removerProgramaFila(filaRealTime);
+
+                    inicializarPrograma(programaRealTime,pegarNomePrograma(programaRemovido),
+                                                           pegarTempoInicioPrograma(programaRemovido),
+                                                           pegarTempoDuracaoPrograma(programaRemovido),
+                                                           pegarTipoEscalonamentoPrograma(programaRemovido),
+                                                           pegarPidPrograma(programaRemovido));
+
+                    inicioPrograma = pegarTempoInicioPrograma(programaRealTime);
+                    duracaoPrograma = pegarTempoDuracaoPrograma(programaRealTime);
+                }
+
+                if((!(strcmp(pegarNomePrograma(programaRealTime),"RealTime") == 0)) && 
+                   (tempoDecorrido >= inicioPrograma && tempoDecorrido <= inicioPrograma + duracaoPrograma)
+                   && executandoRealTime) // Prioridade RealTime
+                {
+                    if(tempoDecorrido == inicioPrograma + duracaoPrograma)
+                    {
+                        kill(pegarPidPrograma(programaRealTime),SIGSTOP);
+
+                        if(!filaVazia(filaRealTime))
+                        {
+                            inicializarPrograma(programaRealTime,"RealTime",-1,-1,REALTIME,0);
+                            inserirFila(filaRealTime,programaRealTime);
+                        }
+                        // else
+                        // {
+                        //     inserirFila(filaRealTime,programaRealTime);
+                        // }
+                        
+                        executandoRealTime = false;
+                        continue;
+                    }
+                    else
+                    {
+                        if(pegarPidPrograma(programaRealTime) != 0 &&                            
+                            waitpid(pegarPidPrograma(programaRealTime),NULL,WNOHANG) != 0)
+                        {   
+                            executandoRealTime = false;
+                            continue;
+                        }
+
+                        strcpy(nomePrograma,"./");
+                        strcat(nomePrograma,pegarNomePrograma(programaRealTime));
+ 
+                        printf("T:%d Executando RealTime %s\n",tempoDecorrido,nomePrograma);
+
+                        if(fork() == 0)
+                        {
+                            __pid_t pidPrograma = pegarPidPrograma(programaRealTime);
+
+                            if(pidPrograma == 0)
+                            {
+                                setarPidPrograma(programaRealTime,getpid());
+                                execvp(nomePrograma,args);
+                            }
+                            else
+                            {
+                                kill(pidPrograma,SIGCONT);
+                                exit(0);
+                            }
+                        }
+                    }
+                }
+                else // Chance de Execução para o Round Robin
+                {
+                    if(!filaVazia(filaRoundRobin))
+                    {
+                        // Parar Programa Anterior
+                        if(strcmp(pegarNomePrograma(programaRoundRobin),"RoundRobin") != 0)
+                        {   
+                            kill(pegarPidPrograma(programaRoundRobin),SIGSTOP);
+                        }
+
+                        programaRemovido = removerProgramaFila(filaRoundRobin);
+
+                        if(pegarPidPrograma(programaRemovido) != 0 
+                        && waitpid(pegarPidPrograma(programaRemovido),NULL,WNOHANG) != 0)
+                        {   
+                            continue;
+                        } 
+
+                        inicializarPrograma(programaRoundRobin,pegarNomePrograma(programaRemovido),
+                                                               pegarTempoInicioPrograma(programaRemovido),
+                                                               pegarTempoDuracaoPrograma(programaRemovido),
+                                                               pegarTipoEscalonamentoPrograma(programaRemovido),
+                                                               pegarPidPrograma(programaRemovido));
+
+                        strcpy(nomePrograma,"./");
+                        strcat(nomePrograma,pegarNomePrograma(programaRoundRobin));
+
+                        printf("T:%d Executando Round Robin %s\n",tempoDecorrido,nomePrograma);
+
+                        if(fork() == 0)
+                        {   
+                            __pid_t pidPrograma = pegarPidPrograma(programaRoundRobin);
+
+                            if(pidPrograma == 0)
+                            {
+                                setarPidPrograma(programaRoundRobin,getpid());
+                                setarExecucaoPrograma(programaRoundRobin,true);
+                                execvp(nomePrograma,args);
+                            }
+                            else
+                            {
+                                setarExecucaoPrograma(programaRoundRobin,true);
+                                kill(pidPrograma,SIGCONT);
+                                exit(0); //Impede que siga Criando mais Filhos
+                            }
+                        }
+                                            
+                        while(!programaEmExecucao(programaRoundRobin)) // Impede que Insira na Fila antes do Programa começar a Executar
+                        {
+                        
+                        }
+
+                        setarExecucaoPrograma(programaRoundRobin,false);
+                    
+                        if(waitpid(pegarPidPrograma(programaRoundRobin),NULL,WNOHANG) == 0)
+                        {   
+                            inserirFila(filaRoundRobin,programaRoundRobin);
+                        }
+                    }
+                }
+            }
+        }
+
+        if(filaVazia(filaRealTime) 
+             && (filaVazia(filaRoundRobin) && waitpid(pegarPidPrograma(programaRealTime),NULL,WNOHANG) != 0))
+             {printf("Terminou\n"); break;}
+        
+        sleep(1);
+        gettimeofday(&tempoFinal,NULL);
+    }
+
+    imprimirFila(filaRealTime);
+    imprimirFila(filaRoundRobin);
+
+    shmdt(programa);
+    shmdt(interpretadorEncerrado);
+
+    shmctl(memoriaCompartilhadaPrograma,IPC_RMID,NULL);
+    shmctl(memoriaCompartilhadaInterpretador,IPC_RMID,NULL);
+}
