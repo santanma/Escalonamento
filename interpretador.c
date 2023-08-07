@@ -12,7 +12,7 @@
 
 FILE *arquivoLog;
 
-#define NOME_ARQUIVO "exec_UmRT.txt"
+#define NOME_ARQUIVO "exec_VariosRR_VariosRT.txt"
 #define MAX_LINHA_ARQUIVO 50
 
 void inicializarArquivoLog (char *nomeArquivoLog);
