@@ -1,0 +1,230 @@
+Lendo Processo Realtime P6 Inicio = 0 Duracao = 5
+Executando Interpretador
+Lendo Processo Realtime P10 Inicio = 15 Duracao = 20
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Realtime P7 Inicio = 40 Duracao = 15
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Realtime P9 Inicio = 5 Duracao = 10
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Realtime P7 Inicio = 0 Duracao = 50
+Processo Realtime P7 não Alocado - Tempos Conflitantes
+Lendo Processo Realtime P7 Inicio = 50 Duracao = 25
+Processo Realtime P7 não Alocado - Tempo Máximo Excedido
+Executando Escalonador
+
+*******Filas no Início do Programa*******
+Programa Imprimindo P6
+TipoEscalonamento Realtime Programa P6|Inicio = 0|Duracao = 5| -->
+Programa Imprimindo P9
+TipoEscalonamento Realtime Programa P9|Inicio = 5|Duracao = 10| -->
+Programa Imprimindo P10
+TipoEscalonamento Realtime Programa P10|Inicio = 15|Duracao = 20| -->
+Programa Imprimindo P7
+TipoEscalonamento Realtime Programa P7|Inicio = 40|Duracao = 15| -->
+*****************************************
+T:0 Executando RealTime ./P6
+Imprimir P6 32891
+P6:Recebeu 1 Arquivos Texto
+P6:Recebeu 2 Arquivos Texto
+P6:Recebeu 3 Arquivos Texto
+P6:Recebeu 4 Arquivos Texto
+P6:Recebeu 5 Arquivos Texto
+T:1 - Aguardando
+T:2 - Aguardando
+T:3 - Aguardando
+T:4 - Aguardando
+T:5 Executando RealTime ./P9
+Imprimir P9 32893
+P9:Recebeu 1 Arquivos Texto
+P9:Recebeu 2 Arquivos Texto
+P9:Recebeu 3 Arquivos Texto
+P9:Recebeu 4 Arquivos Texto
+P9:Recebeu 5 Arquivos Texto
+P9:Recebeu 6 Arquivos Texto
+P9:Recebeu 7 Arquivos Texto
+P9:Recebeu 8 Arquivos Texto
+P9:Recebeu 9 Arquivos Texto
+P9:Recebeu 10 Arquivos Texto
+P9:Recebeu 11 Arquivos Texto
+T:6 Executando RealTime ./P9
+T:7 Executando RealTime ./P9
+T:8 Executando RealTime ./P9
+T:9 Executando RealTime ./P9
+T:10 Executando RealTime ./P9
+T:11 Executando RealTime ./P9
+T:12 Executando RealTime ./P9
+T:13 Executando RealTime ./P9
+T:14 Executando RealTime ./P9
+T:15 Executando RealTime ./P10
+Imprimir P10 32903
+T:16 Executando RealTime ./P10
+T:17 Executando RealTime ./P10
+T:18 Executando RealTime ./P10
+T:19 Executando RealTime ./P10
+T:20 Executando RealTime ./P10
+T:21 Executando RealTime ./P10
+T:22 Executando RealTime ./P10
+T:23 Executando RealTime ./P10
+T:24 Executando RealTime ./P10
+T:25 Executando RealTime ./P10
+T:26 Executando RealTime ./P10
+T:27 Executando RealTime ./P10
+T:28 Executando RealTime ./P10
+T:29 Executando RealTime ./P10
+T:30 Executando RealTime ./P10
+T:31 Executando RealTime ./P10
+T:32 Executando RealTime ./P10
+T:33 Executando RealTime ./P10
+T:34 Executando RealTime ./P10
+T:35 - Aguardando
+T:36 - Aguardando
+T:37 - Aguardando
+T:38 - Aguardando
+T:39 - Aguardando
+T:40 Executando RealTime ./P7
+Imprimir P7 32967
+P7:Recebeu 1 Arquivos Texto
+P7:Recebeu 2 Arquivos Texto
+P7:Recebeu 3 Arquivos Texto
+P7:Recebeu 4 Arquivos Texto
+P7:Recebeu 5 Arquivos Texto
+P7:Recebeu 6 Arquivos Texto
+P7:Recebeu 7 Arquivos Texto
+P7:Recebeu 8 Arquivos Texto
+P7:Recebeu 9 Arquivos Texto
+P7:Recebeu 10 Arquivos Texto
+T:41 - Aguardando
+T:42 - Aguardando
+T:43 - Aguardando
+T:44 - Aguardando
+T:45 - Aguardando
+T:46 - Aguardando
+T:47 - Aguardando
+T:48 - Aguardando
+T:49 - Aguardando
+T:50 - Aguardando
+T:51 - Aguardando
+T:52 - Aguardando
+T:54 - Aguardando
+T:55 - Aguardando
+T:56 - Aguardando
+T:57 - Aguardando
+T:58 - Aguardando
+T:59 - Aguardando
+T:0 - Aguardando
+T:1 - Aguardando
+T:2 - Aguardando
+T:3 - Aguardando
+T:4 - Aguardando
+T:5 Executando RealTime ./P9
+P9:Recebeu 12 Arquivos Texto
+P9:Recebeu 13 Arquivos Texto
+P9:Recebeu 14 Arquivos Texto
+P9:Recebeu 15 Arquivos Texto
+P9:Recebeu 16 Arquivos Texto
+P9:Recebeu 17 Arquivos Texto
+P9:Recebeu 18 Arquivos Texto
+P9:Recebeu 19 Arquivos Texto
+P9:Recebeu 20 Arquivos Texto
+T:6 - Aguardando
+T:7 - Aguardando
+T:8 - Aguardando
+T:9 - Aguardando
+T:10 - Aguardando
+T:11 - Aguardando
+T:12 - Aguardando
+T:13 - Aguardando
+T:14 - Aguardando
+T:15 Executando RealTime ./P10
+P10:Recebeu 1 Arquivos Texto
+P10:Recebeu 2 Arquivos Texto
+P10:Recebeu 3 Arquivos Texto
+P10:Recebeu 4 Arquivos Texto
+P10:Recebeu 5 Arquivos Texto
+P10:Recebeu 6 Arquivos Texto
+P10:Recebeu 7 Arquivos Texto
+P10:Recebeu 8 Arquivos Texto
+P10:Recebeu 9 Arquivos Texto
+P10:Recebeu 10 Arquivos Texto
+P10:Recebeu 11 Arquivos Texto
+T:16 Executando RealTime ./P10
+T:17 Executando RealTime ./P10
+T:18 Executando RealTime ./P10
+T:19 Executando RealTime ./P10
+T:20 Executando RealTime ./P10
+T:21 Executando RealTime ./P10
+T:22 Executando RealTime ./P10
+T:23 Executando RealTime ./P10
+T:24 Executando RealTime ./P10
+T:25 Executando RealTime ./P10
+T:26 Executando RealTime ./P10
+T:27 Executando RealTime ./P10
+T:28 Executando RealTime ./P10
+T:29 Executando RealTime ./P10
+T:30 Executando RealTime ./P10
+T:31 Executando RealTime ./P10
+T:32 Executando RealTime ./P10
+T:33 Executando RealTime ./P10
+P10:Recebeu 12 Arquivos Texto
+P10:Recebeu 13 Arquivos Texto
+P10:Recebeu 14 Arquivos Texto
+P10:Recebeu 15 Arquivos Texto
+P10:Recebeu 16 Arquivos Texto
+P10:Recebeu 17 Arquivos Texto
+P10:Recebeu 18 Arquivos Texto
+P10:Recebeu 19 Arquivos Texto
+P10:Recebeu 20 Arquivos Texto
+P10:Recebeu 21 Arquivos Texto
+P10:Recebeu 22 Arquivos Texto
+T:34 Executando RealTime ./P10
+T:35 - Aguardando
+T:36 - Aguardando
+T:37 - Aguardando
+T:38 - Aguardando
+T:39 - Aguardando
+T:40 - Aguardando
+T:41 - Aguardando
+T:42 - Aguardando
+T:43 - Aguardando
+T:44 - Aguardando
+T:45 - Aguardando
+T:46 - Aguardando
+T:47 - Aguardando
+T:48 - Aguardando
+T:49 - Aguardando
+T:50 - Aguardando
+T:51 - Aguardando
+T:52 - Aguardando
+T:53 - Aguardando
+T:54 - Aguardando
+T:55 - Aguardando
+T:56 - Aguardando
+T:57 - Aguardando
+T:58 - Aguardando
+T:59 - Aguardando
+T:0 - Aguardando
+T:1 - Aguardando
+T:2 - Aguardando
+T:3 - Aguardando
+T:4 - Aguardando
+T:5 - Aguardando
+T:6 - Aguardando
+T:7 - Aguardando
+T:8 - Aguardando
+T:9 - Aguardando
+T:10 - Aguardando
+T:11 - Aguardando
+T:12 - Aguardando
+T:13 - Aguardando
+T:14 - Aguardando
+T:15 Executando RealTime ./P10
+P10:Recebeu 23 Arquivos Texto
+P10:Recebeu 24 Arquivos Texto
+P10:Recebeu 25 Arquivos Texto
+Fim de Todos os Programas
+
+*******Filas ao Final do Programa*******
+
