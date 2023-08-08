@@ -1,0 +1,233 @@
+Lendo Processo Round Robbin P1
+Executando Interpretador
+Lendo Processo Round Robbin P5
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Round Robbin P2
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Round Robbin P4
+Executando Escalonador
+Executando Interpretador
+Executando Escalonador
+
+*******Filas no Início do Programa*******
+Programa Imprimindo P1
+TipoEscalonamento RoundRobin Programa P1|Inicio = -1|Duracao = 1| -->
+Programa Imprimindo P5
+TipoEscalonamento RoundRobin Programa P5|Inicio = -1|Duracao = 1| -->
+Programa Imprimindo P2
+TipoEscalonamento RoundRobin Programa P2|Inicio = -1|Duracao = 1| -->
+Programa Imprimindo P4
+TipoEscalonamento RoundRobin Programa P4|Inicio = -1|Duracao = 1| -->
+*****************************************
+T:0 Executando Round Robin ./P1
+Imprimir P1 31879
+T:1 Executando Round Robin ./P5
+Imprimir P5 31898
+T:2 Executando Round Robin ./P2
+Imprimir P2 31899
+T:3 Executando Round Robin ./P4
+Imprimir P4 31900
+T:4 Executando Round Robin ./P1
+T:5 Executando Round Robin ./P5
+T:6 Executando Round Robin ./P2
+T:7 Executando Round Robin ./P4
+T:8 Executando Round Robin ./P1
+T:9 Executando Round Robin ./P5
+T:10 Executando Round Robin ./P2
+T:11 Executando Round Robin ./P4
+T:12 Executando Round Robin ./P1
+T:13 Executando Round Robin ./P5
+T:14 Executando Round Robin ./P2
+T:15 Executando Round Robin ./P4
+T:16 Executando Round Robin ./P1
+T:17 Executando Round Robin ./P5
+T:18 Executando Round Robin ./P2
+T:19 Executando Round Robin ./P4
+T:20 Executando Round Robin ./P1
+T1 = 5.844164
+T:21 Executando Round Robin ./P5
+T:22 Executando Round Robin ./P2
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P2
+T:26 Executando Round Robin ./P4
+T:27 Executando Round Robin ./P5
+T:28 Executando Round Robin ./P2
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P2
+T:32 Executando Round Robin ./P4
+T:33 Executando Round Robin ./P5
+T:34 Executando Round Robin ./P2
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P2
+T:38 Executando Round Robin ./P4
+T:39 Executando Round Robin ./P5
+T:40 Executando Round Robin ./P2
+T2 = 11.878113
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P4
+T:44 Executando Round Robin ./P5
+T:45 Executando Round Robin ./P4
+T:46 Executando Round Robin ./P5
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P4
+T:50 Executando Round Robin ./P5
+T:51 Executando Round Robin ./P4
+T:52 Executando Round Robin ./P5
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:55 Executando Round Robin ./P4
+T:56 Executando Round Robin ./P5
+T:57 Executando Round Robin ./P4
+T:58 Executando Round Robin ./P5
+T:59 Executando Round Robin ./P4
+T:0 Executando Round Robin ./P5
+T:1 Executando Round Robin ./P4
+T:2 Executando Round Robin ./P5
+T:3 Executando Round Robin ./P4
+T:4 Executando Round Robin ./P5
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P4
+T:8 Executando Round Robin ./P5
+T:9 Executando Round Robin ./P4
+T:10 Executando Round Robin ./P5
+T:11 Executando Round Robin ./P4
+T:12 Executando Round Robin ./P5
+T:13 Executando Round Robin ./P4
+T:14 Executando Round Robin ./P5
+T:15 Executando Round Robin ./P4
+T:16 Executando Round Robin ./P5
+T:17 Executando Round Robin ./P4
+T:18 Executando Round Robin ./P5
+T:19 Executando Round Robin ./P4
+T:20 Executando Round Robin ./P5
+T:21 Executando Round Robin ./P4
+T:22 Executando Round Robin ./P5
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P4
+T:26 Executando Round Robin ./P5
+T:27 Executando Round Robin ./P4
+T:28 Executando Round Robin ./P5
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P4
+T:32 Executando Round Robin ./P5
+T:33 Executando Round Robin ./P4
+T:34 Executando Round Robin ./P5
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P4
+T:38 Executando Round Robin ./P5
+T:39 Executando Round Robin ./P4
+T:40 Executando Round Robin ./P5
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P4
+T:44 Executando Round Robin ./P5
+T:45 Executando Round Robin ./P4
+T:46 Executando Round Robin ./P5
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P4
+T:50 Executando Round Robin ./P5
+T:51 Executando Round Robin ./P4
+T:52 Executando Round Robin ./P5
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:55 Executando Round Robin ./P4
+T:56 Executando Round Robin ./P5
+T:57 Executando Round Robin ./P4
+T:58 Executando Round Robin ./P5
+T:59 Executando Round Robin ./P4
+T:0 Executando Round Robin ./P5
+T:1 Executando Round Robin ./P4
+T:2 Executando Round Robin ./P5
+T:3 Executando Round Robin ./P4
+T:4 Executando Round Robin ./P5
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P4
+T:8 Executando Round Robin ./P5
+T:9 Executando Round Robin ./P4
+T:10 Executando Round Robin ./P5
+T:11 Executando Round Robin ./P4
+T:12 Executando Round Robin ./P5
+T:13 Executando Round Robin ./P4
+T:14 Executando Round Robin ./P5
+T:15 Executando Round Robin ./P4
+T:16 Executando Round Robin ./P5
+T:17 Executando Round Robin ./P4
+T:18 Executando Round Robin ./P5
+T:19 Executando Round Robin ./P4
+T:20 Executando Round Robin ./P5
+T:21 Executando Round Robin ./P4
+T:22 Executando Round Robin ./P5
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P4
+T:26 Executando Round Robin ./P5
+T:27 Executando Round Robin ./P4
+T:28 Executando Round Robin ./P5
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P4
+T:32 Executando Round Robin ./P5
+T:33 Executando Round Robin ./P4
+T:34 Executando Round Robin ./P5
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P4
+T:38 Executando Round Robin ./P5
+T:39 Executando Round Robin ./P4
+T:40 Executando Round Robin ./P5
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P4
+T:44 Executando Round Robin ./P5
+T:45 Executando Round Robin ./P4
+T:46 Executando Round Robin ./P5
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P4
+T:50 Executando Round Robin ./P5
+T:51 Executando Round Robin ./P4
+T:52 Executando Round Robin ./P5
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:55 Executando Round Robin ./P4
+T:56 Executando Round Robin ./P5
+T:57 Executando Round Robin ./P4
+T:58 Executando Round Robin ./P5
+T:59 Executando Round Robin ./P4
+T:0 Executando Round Robin ./P5
+T:1 Executando Round Robin ./P4
+T:2 Executando Round Robin ./P5
+T:3 Executando Round Robin ./P4
+T:4 Executando Round Robin ./P5
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P4
+T:8 Executando Round Robin ./P5
+T:9 Executando Round Robin ./P4
+T:10 Executando Round Robin ./P5
+T:11 Executando Round Robin ./P4
+T4 = 86.470725
+T:12 Executando Round Robin ./P5
+T:13 Executando Round Robin ./P5
+T:14 Executando Round Robin ./P5
+T:15 Executando Round Robin ./P5
+T:16 Executando Round Robin ./P5
+T:17 Executando Round Robin ./P5
+T5 = 92.426266
+Fim de Todos os Programas
+
+*******Filas ao Final do Programa*******
+
