@@ -1,0 +1,91 @@
+Lendo Processo Realtime P6 Inicio = 0 Duracao = 30
+Executando Escalonador
+Executando Interpretador
+Executando Escalonador
+
+*******Filas no Início do Programa*******
+Programa Imprimindo P6
+TipoEscalonamento Realtime Programa P6|Inicio = 0|Duracao = 30| -->
+*****************************************
+T:0 Executando RealTime ./P6
+Imprimir P6 31583
+P6:Recebeu 1 Arquivos Texto
+T:1 Executando RealTime ./P6
+T:2 Executando RealTime ./P6
+T:3 Executando RealTime ./P6
+T:4 Executando RealTime ./P6
+T:5 Executando RealTime ./P6
+T:6 Executando RealTime ./P6
+T:7 Executando RealTime ./P6
+T:8 Executando RealTime ./P6
+T:9 Executando RealTime ./P6
+T:10 Executando RealTime ./P6
+T:11 Executando RealTime ./P6
+T:12 Executando RealTime ./P6
+T:13 Executando RealTime ./P6
+T:14 Executando RealTime ./P6
+T:15 Executando RealTime ./P6
+T:16 Executando RealTime ./P6
+T:17 Executando RealTime ./P6
+T:18 Executando RealTime ./P6
+T:19 Executando RealTime ./P6
+T:20 Executando RealTime ./P6
+T:21 Executando RealTime ./P6
+T:22 Executando RealTime ./P6
+T:23 Executando RealTime ./P6
+T:24 Executando RealTime ./P6
+T:25 Executando RealTime ./P6
+T:26 Executando RealTime ./P6
+T:27 Executando RealTime ./P6
+T:28 Executando RealTime ./P6
+T:29 Executando RealTime ./P6
+T:30 - Aguardando
+T:31 - Aguardando
+T:32 - Aguardando
+T:33 - Aguardando
+T:34 - Aguardando
+T:35 - Aguardando
+T:36 - Aguardando
+T:37 - Aguardando
+T:38 - Aguardando
+T:39 - Aguardando
+T:40 - Aguardando
+T:41 - Aguardando
+T:42 - Aguardando
+T:43 - Aguardando
+T:44 - Aguardando
+T:45 - Aguardando
+T:46 - Aguardando
+T:47 - Aguardando
+T:48 - Aguardando
+T:49 - Aguardando
+T:50 - Aguardando
+T:51 - Aguardando
+T:52 - Aguardando
+T:53 - Aguardando
+T:54 - Aguardando
+T:55 - Aguardando
+T:56 - Aguardando
+T:57 - Aguardando
+T:58 - Aguardando
+T:59 - Aguardando
+T:0 Executando RealTime ./P6
+P6:Recebeu 2 Arquivos Texto
+P6:Recebeu 3 Arquivos Texto
+T:1 Executando RealTime ./P6
+T:2 Executando RealTime ./P6
+T:3 Executando RealTime ./P6
+T:4 Executando RealTime ./P6
+T:5 Executando RealTime ./P6
+T:6 Executando RealTime ./P6
+T:7 Executando RealTime ./P6
+T:8 Executando RealTime ./P6
+T:9 Executando RealTime ./P6
+T:10 Executando RealTime ./P6
+P6:Recebeu 4 Arquivos Texto
+T:11 Executando RealTime ./P6
+P6:Recebeu 5 Arquivos Texto
+Fim de Todos os Programas
+
+*******Filas ao Final do Programa*******
+
