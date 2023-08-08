@@ -81,15 +81,22 @@ int main (void)
                 // Espera Retornar do Interpretador    
                 if(*interpretadorEncerrado) break;
             }
-            fprintf(arquivoLog,"Executando Escalonador\n");
+            // fprintf(arquivoLog,"Executando Escalonador\n");
+            printf("Executando Escalonador\n");
         }
         else
         {
             if(!filaOrdenada)
             {
-                ordenarFila(&filaRealTime);
+                ordenarFila(&filaRealTime);  
 
                 filaOrdenada = true;
+
+                // fprintf(arquivoLog,"\n*******Filas no Início do Programa*******\n");
+                printf("\n*******Filas no Início do Programa*******\n");
+                imprimirFila(filaRealTime);
+                imprimirFila(filaRoundRobin);
+                printf("*****************************************\n");
 
                 //Iniciar Contagem
                 gettimeofday(&tempoInicial,NULL);
@@ -150,7 +157,8 @@ int main (void)
                         strcpy(nomePrograma,"./");
                         strcat(nomePrograma,pegarNomePrograma(programaRealTime));
  
-                        fprintf(arquivoLog,"T:%d Executando RealTime %s\n",tempoDecorrido,nomePrograma);
+                        // fprintf(arquivoLog,"T:%d Executando RealTime %s\n",tempoDecorrido,nomePrograma);
+                        printf("T:%d Executando RealTime %s\n",tempoDecorrido,nomePrograma);
 
                         if(fork() == 0)
                         {
@@ -196,7 +204,8 @@ int main (void)
                         strcpy(nomePrograma,"./");
                         strcat(nomePrograma,pegarNomePrograma(programaRoundRobin));
 
-                        fprintf(arquivoLog,"T:%d Executando Round Robin %s\n",tempoDecorrido,nomePrograma);
+                        // fprintf(arquivoLog,"T:%d Executando Round Robin %s\n",tempoDecorrido,nomePrograma);
+                        printf("T:%d Executando Round Robin %s\n",tempoDecorrido,nomePrograma);
 
                         if(fork() == 0)
                         {   
@@ -236,7 +245,8 @@ int main (void)
                             && waitpid(pegarPidPrograma(programaRoundRobin),NULL,WNOHANG) != 0
                             && !executandoRealTime)) // Continua Imprimindo até acabarem todos os Programas
                             {
-                                fprintf(arquivoLog,"T:%d - Aguardando\n",tempoDecorrido);
+                                // fprintf(arquivoLog,"T:%d - Aguardando\n",tempoDecorrido);
+                                printf("T:%d - Aguardando\n",tempoDecorrido);
                             }
                     }
                 }
@@ -249,24 +259,28 @@ int main (void)
              && waitpid(pegarPidPrograma(programaRoundRobin),NULL,WNOHANG) != 0
              && !executandoRealTime)
              {
-                fprintf(arquivoLog,"Fim de Todos os Programas\n"); 
+                // fprintf(arquivoLog,"Fim de Todos os Programas\n"); 
+                printf("Fim de Todos os Programas\n"); 
                 break;
              }
         
-        fflush(arquivoLog);
+       // fflush(arquivoLog);
         sleep(1);
         gettimeofday(&tempoFinal,NULL);
     }
 
-    //imprimirFila(filaRealTime);
-    //imprimirFila(filaRoundRobin);
+    // fprintf(arquivoLog,"\n*******Filas ao Final do Programa*******\n");
+    printf("\n*******Filas ao Final do Programa*******\n");
+
+    imprimirFila(filaRealTime);
+    imprimirFila(filaRoundRobin);
 
     fclose(arquivoLog);
 
     shmdt(programa);
     shmdt(interpretadorEncerrado);
     shmdt(programaRealTime);
-    hmdt(programaRoundRobin);
+    shmdt(programaRoundRobin);
 
     shmctl(memoriaCompartilhadaPrograma,IPC_RMID,NULL);
     shmctl(memoriaCompartilhadaInterpretador,IPC_RMID,NULL);

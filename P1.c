@@ -11,7 +11,7 @@ int main (void)
 
     clock_t inicio = clock();
 
-    for(i = 0; i < 1; i++)
+    for(i = 0; i < 1*2; i++)
         for(j = 0; j < UINT_MAX; j++);
 
     clock_t termino = clock();

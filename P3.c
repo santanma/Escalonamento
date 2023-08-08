@@ -11,12 +11,12 @@ int main (void)
 
     clock_t inicio = clock();
 
-    for(i = 0; i < 13; i++)
+    for(i = 0; i < 3*2; i++)
         for(j = 0; j < UINT_MAX; j++);
 
     clock_t termino = clock();
 
     double tempoDecorrido = (double)(termino - inicio)/ CLOCKS_PER_SEC;
 
-    printf("T1 = %lf\n",tempoDecorrido);
+    printf("T3 = %lf\n",tempoDecorrido);
 }

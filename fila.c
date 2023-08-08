@@ -104,15 +104,23 @@ void imprimirFila (Fila *f)
 
     for(; no != NULL; no = no->proximo)
     {  
-        fprintf(arquivoLog,"Programa Imprimindo %s\n",no->programa.nomePrograma);
-        fprintf(arquivoLog,"TipoEscalonamento %s ",no->programa.tipoEscalonamentoPrograma == REALTIME ? "Realtime" : "RoundRobin");
-        fprintf(arquivoLog,"Programa %s|Inicio = %d|Duracao = %d| -->\n",no->programa.nomePrograma,
-                                                                       no->programa.inicioPrograma,
-                                                                       no->programa.duracaoPrograma);
+        // fprintf(arquivoLog,"Programa Imprimindo %s\n",no->programa.nomePrograma);
+        // fprintf(arquivoLog,"TipoEscalonamento %s ",no->programa.tipoEscalonamentoPrograma == REALTIME ? "Realtime" : "RoundRobin");
+        // fprintf(arquivoLog,"Programa %s|Inicio = %d|Duracao = %d| -->\n",no->programa.nomePrograma,
+        //                                                                no->programa.inicioPrograma,
+        //                                                                no->programa.duracaoPrograma);
+
+        printf("Programa Imprimindo %s\n",no->programa.nomePrograma);
+        printf("TipoEscalonamento %s ",no->programa.tipoEscalonamentoPrograma == REALTIME ? "Realtime" : "RoundRobin");
+        printf("Programa %s|Inicio = %d|Duracao = %d| -->\n",no->programa.nomePrograma,
+                                                             no->programa.inicioPrograma,
+                                                             no->programa.duracaoPrograma);
+
 
     }
-    fprintf(arquivoLog,"Terminou\n");
-    fflush(arquivoLog);
+    // fprintf(arquivoLog,"Terminou\n");
+    // fflush(arquivoLog);
+
     fclose(arquivoLog);
 }
 

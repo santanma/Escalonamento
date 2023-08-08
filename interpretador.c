@@ -71,7 +71,7 @@ int main (void)
 
     if(pid == 0) // Execução do Filho -- Responsável pela Leitura do exec.txt
     {
-        inicializarArquivoLog("log_EscalonadorInterpretador.txt");
+        //inicializarArquivoLog("log_EscalonadorInterpretador.txt");
         arquivoLog = fopen("log_EscalonadorInterpretador.txt","a+");
 
         arquivoInterpretador = fopen(NOME_ARQUIVO,"r");
@@ -86,15 +86,18 @@ int main (void)
         {
             if(tipoEscalonamentoArquivo == 'I') // Real Time
             {
-                fprintf(arquivoLog,"Lendo Processo Realtime %s Inicio = %d Duracao = %d\n",nomePrograma,inicioPrograma,duracaoPrograma);
-                
+                //fprintf(arquivoLog,"Lendo Processo Realtime %s Inicio = %d Duracao = %d\n",nomePrograma,inicioPrograma,duracaoPrograma);
+                printf("Lendo Processo Realtime %s Inicio = %d Duracao = %d\n",nomePrograma,inicioPrograma,duracaoPrograma);
+
                 alocado = true;
 
                 // Verificar Limite de Tempo Máximo 
                 if(inicioPrograma + duracaoPrograma > 60)
                 {
                     alocado = false;
-                    fprintf(arquivoLog,"Processo Realtime %s não Alocado - Tempo Máximo Excedido\n",nomePrograma);
+                    // fprintf(arquivoLog,"Processo Realtime %s não Alocado - Tempo Máximo Excedido\n",nomePrograma);
+                    printf("Processo Realtime %s não Alocado - Tempo Máximo Excedido\n",nomePrograma);
+                    continue;
                 }
                 else
                 {
@@ -106,7 +109,8 @@ int main (void)
                         else
                         {
                             alocado = false;
-                            fprintf(arquivoLog,"Processo Realtime %s não Alocado - Tempos Conflitantes\n",nomePrograma);
+                            // fprintf(arquivoLog,"Processo Realtime %s não Alocado - Tempos Conflitantes\n",nomePrograma);
+                            printf("Processo Realtime %s não Alocado - Tempos Conflitantes\n",nomePrograma);
                             break;
                         }
                     }
@@ -120,23 +124,27 @@ int main (void)
 
                         inicializarPrograma(programa,nomePrograma,inicioPrograma,duracaoPrograma,REALTIME,0);
                     }
+                    else
+                        continue;
                 }
 
                 tipoEscalonamentoArquivo = '*';
             }
             else //Round Robin
             {
-                fprintf(arquivoLog,"Lendo Processo Round Robbin %s\n",nomePrograma);
+                // fprintf(arquivoLog,"Lendo Processo Round Robbin %s\n",nomePrograma);
+                printf("Lendo Processo Round Robbin %s\n",nomePrograma);
 
                 inicializarPrograma(programa,nomePrograma,-1,1,ROUND_ROBBIN,0);
             }
 
-            fflush(arquivoLog);
+           // fflush(arquivoLog);
 
             while(!verificarEnfileiramento(programa))
             {
                 // Espera Retornar do Escalonador 
             }
+            // fprintf(arquivoLog,"Executando Interpretador\n");
             printf("Executando Interpretador\n");
 
             sleep(1);
