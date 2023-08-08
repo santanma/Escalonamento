@@ -1,0 +1,319 @@
+Lendo Processo Realtime P8 Inicio = 10 Duracao = 3
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Round Robbin P5
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Round Robbin P9
+Executando Escalonador
+Executando Interpretador
+Lendo Processo Round Robbin P4
+Executando Escalonador
+Executando Interpretador
+Executando Escalonador
+
+*******Filas no Início do Programa*******
+Programa Imprimindo P8
+TipoEscalonamento Realtime Programa P8|Inicio = 10|Duracao = 3| -->
+Programa Imprimindo P5
+TipoEscalonamento RoundRobin Programa P5|Inicio = -1|Duracao = 1| -->
+Programa Imprimindo P9
+TipoEscalonamento RoundRobin Programa P9|Inicio = -1|Duracao = 1| -->
+Programa Imprimindo P4
+TipoEscalonamento RoundRobin Programa P4|Inicio = -1|Duracao = 1| -->
+*****************************************
+T:0 Executando Round Robin ./P5
+Imprimir P5 33494
+T:1 Executando Round Robin ./P9
+Imprimir P9 33495
+P9:Recebeu 1 Arquivos Texto
+P9:Recebeu 2 Arquivos Texto
+P9:Recebeu 3 Arquivos Texto
+P9:Recebeu 4 Arquivos Texto
+P9:Recebeu 5 Arquivos Texto
+P9:Recebeu 6 Arquivos Texto
+T:2 Executando Round Robin ./P4
+Imprimir P4 33496
+T:3 Executando Round Robin ./P5
+T:4 Executando Round Robin ./P9
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P9
+T:8 Executando Round Robin ./P4
+T:9 Executando Round Robin ./P5
+T:10 Executando RealTime ./P8
+Imprimir P8 33504
+T:11 Executando RealTime ./P8
+T:12 Executando RealTime ./P8
+T:13 Executando Round Robin ./P9
+T:14 Executando Round Robin ./P4
+T:15 Executando Round Robin ./P5
+T:16 Executando Round Robin ./P9
+T:17 Executando Round Robin ./P4
+T:18 Executando Round Robin ./P5
+T:19 Executando Round Robin ./P9
+T:20 Executando Round Robin ./P4
+T:21 Executando Round Robin ./P5
+T:22 Executando Round Robin ./P9
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P9
+T:26 Executando Round Robin ./P4
+T:27 Executando Round Robin ./P5
+T:28 Executando Round Robin ./P9
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P9
+T:32 Executando Round Robin ./P4
+T:33 Executando Round Robin ./P5
+T:34 Executando Round Robin ./P9
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P9
+T:38 Executando Round Robin ./P4
+T:39 Executando Round Robin ./P5
+T:40 Executando Round Robin ./P9
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P9
+T:44 Executando Round Robin ./P4
+T:45 Executando Round Robin ./P5
+T:46 Executando Round Robin ./P9
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P9
+T:50 Executando Round Robin ./P4
+T:51 Executando Round Robin ./P5
+T:52 Executando Round Robin ./P9
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:55 Executando Round Robin ./P9
+T:56 Executando Round Robin ./P4
+T:57 Executando Round Robin ./P5
+T:58 Executando Round Robin ./P9
+T:59 Executando Round Robin ./P4
+T:0 Executando Round Robin ./P5
+T:1 Executando Round Robin ./P9
+T:2 Executando Round Robin ./P4
+T:3 Executando Round Robin ./P5
+T:4 Executando Round Robin ./P9
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P9
+T:8 Executando Round Robin ./P4
+T:9 Executando Round Robin ./P5
+T:10 Executando RealTime ./P8
+T:11 Executando RealTime ./P8
+T:12 Executando RealTime ./P8
+T:13 Executando Round Robin ./P9
+T:14 Executando Round Robin ./P4
+T:15 Executando Round Robin ./P5
+T:16 Executando Round Robin ./P9
+T:17 Executando Round Robin ./P4
+T:18 Executando Round Robin ./P5
+T:19 Executando Round Robin ./P9
+T:20 Executando Round Robin ./P4
+T:21 Executando Round Robin ./P5
+T:22 Executando Round Robin ./P9
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P9
+T:26 Executando Round Robin ./P4
+T:27 Executando Round Robin ./P5
+T:28 Executando Round Robin ./P9
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P9
+T:32 Executando Round Robin ./P4
+T:33 Executando Round Robin ./P5
+T:34 Executando Round Robin ./P9
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P9
+T:38 Executando Round Robin ./P4
+T:39 Executando Round Robin ./P5
+T:40 Executando Round Robin ./P9
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P9
+T:44 Executando Round Robin ./P4
+T:45 Executando Round Robin ./P5
+T:46 Executando Round Robin ./P9
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P9
+T:50 Executando Round Robin ./P4
+T:51 Executando Round Robin ./P5
+T:52 Executando Round Robin ./P9
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:55 Executando Round Robin ./P9
+T:56 Executando Round Robin ./P4
+T:57 Executando Round Robin ./P5
+T:58 Executando Round Robin ./P9
+T:59 Executando Round Robin ./P4
+T:0 Executando Round Robin ./P5
+T:1 Executando Round Robin ./P9
+T:2 Executando Round Robin ./P4
+T:3 Executando Round Robin ./P5
+T:4 Executando Round Robin ./P9
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P9
+T:8 Executando Round Robin ./P4
+T:9 Executando Round Robin ./P5
+T:10 Executando RealTime ./P8
+T:11 Executando RealTime ./P8
+P8:Recebeu 1 Arquivos Texto
+T:12 Executando RealTime ./P8
+P8:Recebeu 2 Arquivos Texto
+P8:Recebeu 3 Arquivos Texto
+P8:Recebeu 4 Arquivos Texto
+P8:Recebeu 5 Arquivos Texto
+P8:Recebeu 6 Arquivos Texto
+T:13 Executando Round Robin ./P9
+T:14 Executando Round Robin ./P4
+T:15 Executando Round Robin ./P5
+T:16 Executando Round Robin ./P9
+T:17 Executando Round Robin ./P4
+T:18 Executando Round Robin ./P5
+T:19 Executando Round Robin ./P9
+T:20 Executando Round Robin ./P4
+T:21 Executando Round Robin ./P5
+T:22 Executando Round Robin ./P9
+T:23 Executando Round Robin ./P4
+T:24 Executando Round Robin ./P5
+T:25 Executando Round Robin ./P9
+T:26 Executando Round Robin ./P4
+T:27 Executando Round Robin ./P5
+T:28 Executando Round Robin ./P9
+T:29 Executando Round Robin ./P4
+T:30 Executando Round Robin ./P5
+T:31 Executando Round Robin ./P9
+T:32 Executando Round Robin ./P4
+T:33 Executando Round Robin ./P5
+T:34 Executando Round Robin ./P9
+T:35 Executando Round Robin ./P4
+T:36 Executando Round Robin ./P5
+T:37 Executando Round Robin ./P9
+T:38 Executando Round Robin ./P4
+T:39 Executando Round Robin ./P5
+T:40 Executando Round Robin ./P9
+T:41 Executando Round Robin ./P4
+T:42 Executando Round Robin ./P5
+T:43 Executando Round Robin ./P9
+P9:Recebeu 7 Arquivos Texto
+P9:Recebeu 8 Arquivos Texto
+P9:Recebeu 9 Arquivos Texto
+P9:Recebeu 10 Arquivos Texto
+P9:Recebeu 11 Arquivos Texto
+P9:Recebeu 12 Arquivos Texto
+T:44 Executando Round Robin ./P4
+T:45 Executando Round Robin ./P5
+T:46 Executando Round Robin ./P9
+P9:Recebeu 13 Arquivos Texto
+P9:Recebeu 14 Arquivos Texto
+P9:Recebeu 15 Arquivos Texto
+P9:Recebeu 16 Arquivos Texto
+P9:Recebeu 17 Arquivos Texto
+P9:Recebeu 18 Arquivos Texto
+T:47 Executando Round Robin ./P4
+T:48 Executando Round Robin ./P5
+T:49 Executando Round Robin ./P9
+T:50 Executando Round Robin ./P4
+T:51 Executando Round Robin ./P5
+T:52 Executando Round Robin ./P9
+T:53 Executando Round Robin ./P4
+T:54 Executando Round Robin ./P5
+T:56 Executando Round Robin ./P9
+T:57 Executando Round Robin ./P4
+T:58 Executando Round Robin ./P5
+T:59 Executando Round Robin ./P9
+T:0 Executando Round Robin ./P4
+T:1 Executando Round Robin ./P5
+T:2 Executando Round Robin ./P9
+P9:Recebeu 19 Arquivos Texto
+P9:Recebeu 20 Arquivos Texto
+T:3 Executando Round Robin ./P4
+T:4 Executando Round Robin ./P5
+T:5 Executando Round Robin ./P4
+T:6 Executando Round Robin ./P5
+T:7 Executando Round Robin ./P4
+T:8 Executando Round Robin ./P5
+T:9 Executando Round Robin ./P4
+T:10 Executando RealTime ./P8
+P8:Recebeu 7 Arquivos Texto
+P8:Recebeu 8 Arquivos Texto
+P8:Recebeu 9 Arquivos Texto
+P8:Recebeu 10 Arquivos Texto
+P8:Recebeu 11 Arquivos Texto
+P8:Recebeu 12 Arquivos Texto
+T:11 Executando RealTime ./P8
+T:12 Executando RealTime ./P8
+T:13 Executando Round Robin ./P5
+T:14 Executando Round Robin ./P4
+T:15 Executando Round Robin ./P5
+T:16 Executando Round Robin ./P4
+T:17 Executando Round Robin ./P5
+T:18 Executando Round Robin ./P4
+T:19 Executando Round Robin ./P5
+T:20 Executando Round Robin ./P4
+T:21 Executando Round Robin ./P5
+T:22 Executando Round Robin ./P4
+T:23 Executando Round Robin ./P5
+T:24 Executando Round Robin ./P4
+T:25 Executando Round Robin ./P5
+T:26 Executando Round Robin ./P4
+T:27 Executando Round Robin ./P5
+T:28 Executando Round Robin ./P4
+T:29 Executando Round Robin ./P5
+T:30 Executando Round Robin ./P4
+T:31 Executando Round Robin ./P5
+T:32 Executando Round Robin ./P4
+T:33 Executando Round Robin ./P5
+T:34 Executando Round Robin ./P4
+T:35 Executando Round Robin ./P5
+T:36 Executando Round Robin ./P4
+T:37 Executando Round Robin ./P5
+T:38 Executando Round Robin ./P4
+T:39 Executando Round Robin ./P5
+T:40 Executando Round Robin ./P4
+T:41 Executando Round Robin ./P5
+T:42 Executando Round Robin ./P4
+T:43 Executando Round Robin ./P5
+T:44 Executando Round Robin ./P4
+T:45 Executando Round Robin ./P5
+T:46 Executando Round Robin ./P4
+T:47 Executando Round Robin ./P5
+T:48 Executando Round Robin ./P4
+T:49 Executando Round Robin ./P5
+T:50 Executando Round Robin ./P4
+T:51 Executando Round Robin ./P5
+T:52 Executando Round Robin ./P4
+T:53 Executando Round Robin ./P5
+T:54 Executando Round Robin ./P4
+T:55 Executando Round Robin ./P5
+T:56 Executando Round Robin ./P4
+T:57 Executando Round Robin ./P5
+T:58 Executando Round Robin ./P4
+T:59 Executando Round Robin ./P5
+T:0 Executando Round Robin ./P4
+T:1 Executando Round Robin ./P5
+T5 = 94.377032
+T:2 Executando Round Robin ./P4
+T:3 Executando Round Robin ./P4
+T4 = 88.605297
+T:4 - Aguardando
+T:5 - Aguardando
+T:6 - Aguardando
+T:7 - Aguardando
+T:8 - Aguardando
+T:9 - Aguardando
+T:10 Executando RealTime ./P8
+P8:Recebeu 13 Arquivos Texto
+P8:Recebeu 14 Arquivos Texto
+P8:Recebeu 15 Arquivos Texto
+Fim de Todos os Programas
+
+*******Filas ao Final do Programa*******
+
